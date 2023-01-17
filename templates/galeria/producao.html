@@ -1,0 +1,123 @@
+{% extends 'galeria/base.html' %}
+{% load static %}
+{% block title%}{% endblock title%}
+
+{% block content %}
+<div class="container">
+  <div class="container-fluid mt-3 text-center border">
+    <div class="form-check form-check-inline"><h3>Categoria</h3>
+    </div>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+        <label class="form-check-label" for="inlineRadio1">Filme</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+        <label class="form-check-label" for="inlineRadio2">Série</label>
+    </div>
+  </div>
+
+    <div class="container border-botton mt-2">
+      <div class="input-group mb-1"><span class="input-group-text col-2">Titulo Original</span><input type="text" class="form-control"></div>
+      <div class="input-group mb-1"><span class="input-group-text col-2">Titulo</span><input type="text" class="form-control"></div>
+      <div class="input-group mb-1"><span class="input-group-text col-2">Titulo Alternativo</span><input type="text" class="form-control"></div>
+    </div>
+
+    <div class="container border-botton">
+      <div class="input-group mb-1">
+        <label for="" class="input-group-text col-2">Diretor</label>
+        <select name="" id="" class="form-select">
+          <option selected>Selecione o Diretor</option>
+          <option value="ID_DIRETOR">Diretor 1</option>
+          <option value="ID_DIRETOR">Diretor 2</option>
+        </select>
+        <label for="" class="input-group-text col-2">Estudio</label>
+        <select name="" id="" class="form-select">
+          <option selected>Selecione o Estudio</option>
+          <option value="ID_ESTUDIO">Estudio 1</option>
+          <option value="ID_ESTUDIO">Estudio 2</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="container border-botton">
+      <div class="input-group mb-1">
+        <div class="input-group">
+          <label class="input-group-text col-2" for="inputGroupFile01">Capa</label>
+          <input type="file" class="form-control" id="">
+        </div>    
+        <div class="input-group">
+          <label class="input-group-text col-2" for="inputGroupFile01">Imagem</label>
+          <input type="file" class="form-control" id="">
+        </div>
+      </div>
+    </div>
+
+    <div class="container border-botton">
+      <div class="input-group mb-1">
+        <label for="" class="input-group-text col-2">FILA</label>
+        <select name="" id="" class="form-select">
+          <option value="ID_DIRETOR">Não assistido</option>
+          <option value="ID_DIRETOR">Assistido</option>
+        </select>
+        <label for="" class="input-group-text col-3">Adicionar a lista de prioridades</label>
+        <select name="" id="" class="form-select">
+          <option value="ID_ESTUDIO">NÃO</option>
+          <option value="ID_ESTUDIO">SIM</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="container border-botton mt-1">
+      <div class="input-group mb-1">
+        <span class="input-group-text col-2">Nota particular</span>
+        <input type="text" class="form-control">
+        <span class="input-group-text col-2">/10</span>
+      </div>
+    </div>
+
+    <div class="container border-botton mt-1">
+      <div class="input-group">
+        <span class="input-group-text col-2">Comentario</span>
+        <textarea class="form-control"></textarea>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Div para filme -->
+<div class="container mt-3">
+  <div class="container border-botton mt-1">
+      <div class="input-group mb-1">
+        <span class="input-group-text col-2">Duração</span>
+        <input type="number" class="form-control" min='1' max='10'>
+        <span class="input-group-text col-2">min</span>
+      </div>
+    </div>
+
+    <div class="container border-botton mt-1">
+      <div class="input-group">
+        <span class="input-group-text col-2">Sinopse</span>
+        <textarea class="form-control"></textarea>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Div para serie -->
+<div class="container mt-3">
+  <div class="container border-botton">
+    <div class="input-group mb-1">
+      <label for="" class="input-group-text col-2">Temporada</label>
+      <input type="number" class="form-control" min='1'>
+      <label for="" class="input-group-text col-2">Episódio</label>
+      <input type="number" class="form-control" min='1'>
+      <label for="" class="input-group-text col-2">Duração episódio</label>
+      <input type="number" class="form-control" min='1'>
+    </div>
+    <div class="input-group">
+      <span class="input-group-text col-2">Enredo</span>
+      <textarea class="form-control"></textarea>
+    </div>
+  </div>
+</div>
+{% endblock%}
